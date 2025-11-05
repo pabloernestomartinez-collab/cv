@@ -3,25 +3,20 @@ using UnityEngine.InputSystem;
 
 public class palyer : MonoBehaviour
 {
-    //public GameObject misilArgPrefab; // prefab del misil del jugador   
     private Rigidbody2D _rb; // referencia al componente Rigidbody2D del jugador
-    private Vector2 _movepermanente; // vector para mantener el movimiento constante del jugador
     private float _delay = 0.5f; // delay entre disparos
     public float speed; // velocidad del palyer
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // obtener el componente Rigidbody2D del objeto
-        speed = 1000f;
+        speed = 700f;
     }
     private void OnMove(InputValue inputValue)
     {
         Vector2 move = inputValue.Get<Vector2>(); // obtener el valor del input
-        if (move.x != 0 || move.y != 0)
-        {
-            _movepermanente = move * speed * Time.deltaTime;
-        }
-        _rb.linearVelocity = _movepermanente;// mantiene el movimiento del jugador
+
+        _rb.linearVelocity = move * speed * Time.deltaTime; //permanente;// mantiene el movimiento del jugador
     }
 
     // Update is called once per frame

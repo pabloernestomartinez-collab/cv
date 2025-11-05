@@ -3665,6 +3665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::palyer
   speed: 0
+  animator: {fileID: 1874732907}
 --- !u!50 &1874732911
 Rigidbody2D:
   serializedVersion: 5

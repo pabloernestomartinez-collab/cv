@@ -40,11 +40,14 @@ public class palyer : MonoBehaviour
         }
         animator.SetFloat("moveX", move.x);
         animator.SetFloat("moveY", move.y);
-        transform.localScale= new Vector3(-1, 1,1);
         if (move.x < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
-        } 
+            transform.localScale = new Vector3(-1, 1, 1);//
+        }
+        else if (move.x > 0)
+        {
+            transform.localScale = new Vector3(1,1,1);// invierte el sprite dependiendo de hacia donde se dirija
+        }
 
     }
    

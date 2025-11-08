@@ -16,7 +16,7 @@ public class palyer : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
         move = inputValue.Get<Vector2>(); // obtener el valor del input
-        _rb.linearVelocity = move * speed * Time.deltaTime; //permanente;// mantiene el movimiento del jugador
+        _rb.linearVelocity = move * speed * Time.deltaTime; // mueve el jugador
     }
 
     // Update is called once per frame

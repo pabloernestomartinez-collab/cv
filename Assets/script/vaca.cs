@@ -1,12 +1,10 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class vaca : MonoBehaviour
 {
     private Rigidbody2D _rb; // referencia al componente Rigidbody2D de la vaca
     private float _speed; // velocidad de la vaca
     public Animator animator; // su nombre lo dice
-    private Vector2 move; 
     private float _direccionX; // direccion en X
     private float _direccionY; // direccion en Y
 
@@ -21,42 +19,45 @@ public class vaca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.position = new Vector2(_rb.position.x + _direccionX * _speed * Time.deltaTime, _rb.position.y + _direccionY * _speed * Time.deltaTime);
-
-        if (_rb.position.x > 8.1f) // limitar el movimiento en X
+        if (_rb.position.x > 8f) // limitar el movimiento en X
         {
             _rb.position = new Vector2(8f, _rb.position.y);
-            _direccionX = -_direccionX;
+            _direccionX = -1f;
         }
 
         if (_rb.position.x < -8f)
         {
             _rb.position = new Vector2(-8f, _rb.position.y);
-            _direccionX = -_direccionX;
+            _direccionX = 1f;
         }
 
         if (_rb.position.y > 4f) // limitar el movimiento en Y
         {
             _rb.position = new Vector2(_rb.position.x, 4f);
-            _direccionY = -_direccionY;
+            _direccionY = -1f;
         }
 
-        if (_rb.position.y < -4.5f)
+        if (_rb.position.y < -5f)
         {
-            _rb.position = new Vector2(_rb.position.x, -4.5f);
-            _direccionY = -_direccionY;
+            _rb.position = new Vector2(_rb.position.x, -5f);
+            _direccionY = 1f;
         }
 
-        animator.SetFloat("moveX", move.x);
-        animator.SetFloat("moveY", move.y);
+        _rb.position = new Vector2(_rb.position.x + _direccionX * _speed * Time.deltaTime, _rb.position.y + _direccionY * _speed * Time.deltaTime);
 
-        if (move.x < 0)
+        animator.SetFloat("direccionX", _direccionX);
+        animator.SetFloat("direccionY", _direccionY);
+
+        Debug.Log(_direccionX);
+
+
+        if (_direccionX < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);//invierte el sprite dependiendo de hacia donde se dirija
+            transform.localScale = new Vector3(1, 1, 1);//invierte el sprite dependiendo de hacia donde se dirija
         }
-        else if (move.x > 0)
+        else if (_direccionX > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);// invierte el sprite dependiendo de hacia donde se dirija
+            transform.localScale = new Vector3(-1, 1, 1);// invierte el sprite dependiendo de hacia donde se dirija
         }
 
     }

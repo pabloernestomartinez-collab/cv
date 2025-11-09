@@ -11,12 +11,12 @@ public class palyer : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // obtener el componente Rigidbody2D del objeto
-        speed = 200f;
+        speed = 100f;
     }
     private void OnMove(InputValue inputValue)
     {
         move = inputValue.Get<Vector2>(); // obtener el valor del input
-        _rb.linearVelocity = move * speed * Time.deltaTime; // mueve el jugador
+        _rb.linearVelocity = move * speed * Time.deltaTime; //permanente;// mantiene el movimiento del jugador
     }
 
     // Update is called once per frame
@@ -40,14 +40,11 @@ public class palyer : MonoBehaviour
         }
         animator.SetFloat("moveX", move.x);
         animator.SetFloat("moveY", move.y);
+        transform.localScale= new Vector3(-1, 1,1);
         if (move.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);//
-        }
-        else if (move.x > 0)
-        {
-            transform.localScale = new Vector3(1,1,1);// invierte el sprite dependiendo de hacia donde se dirija
-        }
+            transform.localScale = new Vector3(1, 1, 1);
+        } 
 
     }
    

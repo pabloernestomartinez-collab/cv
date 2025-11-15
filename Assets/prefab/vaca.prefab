@@ -201,4 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813a6907d3d2db646b7948b8ae38c46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::vaca
-  animator: {fileID: 7072497967667259087}
+  misilArgPrefab: {fileID: 0}

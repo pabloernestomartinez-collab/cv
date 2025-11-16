@@ -11,7 +11,7 @@ public class palyer : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // obtener el componente Rigidbody2D del objeto
-        speed = 400f;
+        speed = 800f;
     }
     private void OnMove(InputValue inputValue)
     {

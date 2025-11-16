@@ -19,7 +19,7 @@ public class vaca : MonoBehaviour
         _posicionY = _rb.position.y;
         _direccionX = 1 * Random.Range(-1f,1f);//direccion inicial
         _direccionY = 1 * Random.Range(-1f,1f);
-        _velocidad = 200f;
+        _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
     }
 
     // Update is called once per frame
@@ -36,27 +36,27 @@ public class vaca : MonoBehaviour
         {
             _direccionX = 1 * Random.Range(-1f, 0f);
             _direccionY = 1 * Random.Range(-1f, 1f);
-            _velocidad = 200f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
         }
         if (_rb.position.x < -8f)
         {
             _direccionX = 1 * Random.Range(0f, 1f);
             _direccionY = 1 * Random.Range(-1f, 1f);
-            _velocidad = 200f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
         }
-        
+
         // limitar el movimiento en Y
         if (_rb.position.y > 4f) 
         {
             _direccionX = 1 * Random.Range(-1f, 1f);
             _direccionY = 1 * Random.Range(-1f, 0f);
-            _velocidad = 200f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
         }
         if (_rb.position.y < -4f)
         {
             _direccionX = 1 * Random.Range(-1f, 1f);
             _direccionY = 1 * Random.Range(0f, 1f);
-            _velocidad = 200f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
         }
 
         //corrige la direccion del sprite
@@ -75,7 +75,6 @@ public class vaca : MonoBehaviour
         {
             _direccionX = (_rb.transform.position.x - collision.gameObject.transform.position.x) * 2f;
             _direccionY = (_rb.transform.position.y - collision.gameObject.transform.position.y) * 2f;
-            Debug.Log("X = " + _direccionX + ", Y= " + _direccionY);
         }
     }
 

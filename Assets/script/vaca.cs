@@ -19,14 +19,14 @@ public class vaca : MonoBehaviour
         _posicionY = _rb.position.y;
         _direccionX = 1 * Random.Range(-1f,1f);//direccion inicial
         _direccionY = 1 * Random.Range(-1f,1f);
-        _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
+        _velocidad = (1 - Mathf.Abs(_direccionX)) * 4f + (1 - Mathf.Abs(_direccionY)) * 4f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _posicionX = _direccionX * _velocidad * Time.deltaTime;//nueva posicion
-        _posicionY = _direccionY * _velocidad * Time.deltaTime;
+        _posicionX = _direccionX * _velocidad;//nueva posicion
+        _posicionY = _direccionY * _velocidad;
         movepermanente = new Vector2 (_posicionX , _posicionY);
 
         _rb.linearVelocity = movepermanente;// mantiene el movimiento de la vaca
@@ -36,13 +36,13 @@ public class vaca : MonoBehaviour
         {
             _direccionX = 1 * Random.Range(-1f, 0f);
             _direccionY = 1 * Random.Range(-1f, 1f);
-            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 4f + (1 - Mathf.Abs(_direccionY)) * 4f;
         }
         if (_rb.position.x < -8f)
         {
             _direccionX = 1 * Random.Range(0f, 1f);
             _direccionY = 1 * Random.Range(-1f, 1f);
-            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 4f + (1 - Mathf.Abs(_direccionY)) * 4f;
         }
 
         // limitar el movimiento en Y
@@ -50,13 +50,13 @@ public class vaca : MonoBehaviour
         {
             _direccionX = 1 * Random.Range(-1f, 1f);
             _direccionY = 1 * Random.Range(-1f, 0f);
-            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 4f + (1 - Mathf.Abs(_direccionY)) * 4f;
         }
         if (_rb.position.y < -4f)
         {
             _direccionX = 1 * Random.Range(-1f, 1f);
             _direccionY = 1 * Random.Range(0f, 1f);
-            _velocidad = (1 - Mathf.Abs(_direccionX)) * 400 + (1 - Mathf.Abs(_direccionY)) * 400f;
+            _velocidad = (1 - Mathf.Abs(_direccionX)) * 4f + (1 - Mathf.Abs(_direccionY)) * 4f;
         }
 
         //corrige la direccion del sprite

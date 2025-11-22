@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 196737400439050127}
   m_Layer: 0
   m_Name: toro
-  m_TagString: Untagged
+  m_TagString: Toro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

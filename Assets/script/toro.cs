@@ -69,7 +69,7 @@ public class toro : MonoBehaviour
             _rb.transform.localScale = new Vector3(1, 1, 1);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)//se espatanta la vaca y va en sentido contrario
+    private void OnCollisionEnter2D(Collision2D collision)//se te ataca el toro
     {
         if (collision.gameObject.CompareTag("Player"))//    tag == "Player")
         {

@@ -29,8 +29,9 @@ public class enemigo : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Toro"))//    tag == "toro" se suicida
         {
-            //Destroy(gameObject);
             
+            //Destroy(gameObject);
+
         }
     }
     

@@ -71,7 +71,7 @@ public class vaca : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)//se espatanta la vaca y va en sentido contrario
     {
-        if (collision.gameObject.CompareTag("Player"))//    tag == "Player")
+         if ((collision.gameObject.CompareTag("Player")) || (collision.gameObject.CompareTag("perro")))//    tag == "Player" ó "perro"
         {
             _direccionX = (_rb.transform.position.x - collision.gameObject.transform.position.x) * 2f;
             _direccionY = (_rb.transform.position.y - collision.gameObject.transform.position.y) * 2f;

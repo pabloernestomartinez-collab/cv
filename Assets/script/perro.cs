@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class enemigo : MonoBehaviour
+public class perro : MonoBehaviour
 {
     private Rigidbody _rb;
     [SerializeField] private Transform _objetive;
@@ -21,18 +21,13 @@ public class enemigo : MonoBehaviour
     {
         _agent.SetDestination(_objetive.transform.position);
     }
-    private void OnCollisionEnter2D(Collision2D collision)//ataca el enemigo
+    private void OnCollisionEnter2D(Collision2D collision) //ataca el enemigo
     {
-        if (collision.gameObject.CompareTag("Player"))//    tag == "Player" mata al player
+        if (collision.gameObject.CompareTag("Toro"))//    tag == "toro" mata al perro
         {
-            Destroy(collision.gameObject); // destruir el objeto que colisiona con el misil
-        }
-        else if (collision.gameObject.CompareTag("Toro"))//    tag == "toro" se suicida
-        {
-            
-            //Destroy(gameObject);
+            Destroy(gameObject); //destruye el perro
 
         }
     }
-    
+
 }

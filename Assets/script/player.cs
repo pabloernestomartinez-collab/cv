@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class palyer : MonoBehaviour
+public class player : MonoBehaviour
 {
     private Rigidbody2D _rb; // referencia al componente Rigidbody2D del jugador
     public float speed; // velocidad del palyer

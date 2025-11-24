@@ -859,13 +859,13 @@ GameObject:
   m_Component:
   - component: {fileID: 232135633}
   - component: {fileID: 232135632}
-  - component: {fileID: 232135636}
   - component: {fileID: 232135637}
   - component: {fileID: 232135638}
   - component: {fileID: 232135639}
+  - component: {fileID: 232135640}
   m_Layer: 0
   m_Name: enemigo
-  m_TagString: enemigo
+  m_TagString: perro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,19 +943,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &232135636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232135630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13ecef7f4199b484a95e7ec100eedda5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::enemigo
-  _objetive: {fileID: 3497432002710409628}
 --- !u!195 &232135637
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1051,6 +1038,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &232135640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232135630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dced92e318019bd41a7605d90aa80dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::perro
+  _objetive: {fileID: 3497432002710409628}
 --- !u!1 &298882989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 307488735}
   m_Layer: 0
   m_Name: GameFloor
-  m_TagString: Toro
+  m_TagString: perro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

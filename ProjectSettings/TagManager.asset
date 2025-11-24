@@ -7,6 +7,7 @@ TagManager:
   - casa
   - enemigo
   - Toro
+  - perro
   layers:
   - Default
   - TransparentFX

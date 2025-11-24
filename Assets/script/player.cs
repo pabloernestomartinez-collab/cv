@@ -11,7 +11,7 @@ public class player : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // obtener el componente Rigidbody2D del objeto
-        speed = 8f;
+        speed = 4f;
     }
     private void OnMove(InputValue inputValue)
     {

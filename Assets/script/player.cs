@@ -13,15 +13,23 @@ public class player : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>(); // obtener el componente Rigidbody2D del objeto
         speed = 4f;
     }
-    private void OnMove(InputValue inputValue)
+    private void OnMove(InputValue inputValue)// verifica si se mueve new input system
     {
         move = inputValue.Get<Vector2>(); // obtener el valor del input
         _rb.linearVelocity = move * speed; //permanente;// mantiene el movimiento del jugador
     }
 
+    private void OnAttack() // salta el player cuando presiono ENTER (usar cuando estoy acorralado
+    {
+        _rb.position = new Vector2(_rb.position.x + Random.Range(-1f, 1f), _rb.position.y + Random.Range(-1f, 1f));
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {
+
         if (_rb.position.x > 8f) // limitar el movimiento en X
         {
             _rb.position = new Vector2(8f, _rb.position.y);

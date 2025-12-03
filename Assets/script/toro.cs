@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class toro : MonoBehaviour
 {
-    public GameObject misilArgPrefab; // prefab del misil del jugador   
     private Rigidbody2D _rb; // referencia al componente Rigidbody2D del jugador
     private Vector2 movepermanente; // vector para mantener el movimiento constante del jugador
     private float _posicionX;

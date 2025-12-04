@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6300832003471530755}
   m_Layer: 0
   m_Name: vaca
-  m_TagString: Untagged
+  m_TagString: vaca
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,4 +201,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813a6907d3d2db646b7948b8ae38c46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::vaca
-  misilArgPrefab: {fileID: 0}

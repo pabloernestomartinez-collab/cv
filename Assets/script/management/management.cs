@@ -7,7 +7,7 @@ public class management : MonoBehaviour
     //private int _vidasEnemigo;
     [SerializeField] private int _vacasEncerradas;
     private Rigidbody2D _rigidbody2;
-    [SerializeField] private int _torosEncerrados;
+    //[SerializeField] private int _torosEncerrados;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +16,7 @@ public class management : MonoBehaviour
         // _vidasEnemigo = 10;
         // _vidasPlayer = 10;
         _vacasEncerradas = 0;
-        _torosEncerrados = 0;
+        //_torosEncerrados = 0;
 
     }
 

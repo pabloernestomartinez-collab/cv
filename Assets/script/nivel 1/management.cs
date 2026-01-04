@@ -25,7 +25,7 @@ public class management : MonoBehaviour
     {
         if (_vacasEncerradas==2)
         {
-            SceneManager.LoadScene("nivel2");// carga la escena nivel 2
+            SceneManager.LoadScene("tapa2");// carga la escena nivel 2
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) //suma una vaca al corral

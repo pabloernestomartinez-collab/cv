@@ -428,7 +428,7 @@ Transform:
   m_GameObject: {fileID: 612944014}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.85, y: 2.74, z: 0}
+  m_LocalPosition: {x: -7.24, y: 2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -887,37 +887,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5377169380591312483, guid: be794b8c4cc8a07498abf6b7091d6371, type: 3}
   m_PrefabInstance: {fileID: 2090547431}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1457692873
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1457692874}
-  m_Layer: 0
-  m_Name: perros
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1457692874
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457692873}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03133, y: -0.06848, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770317193
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +899,6 @@ GameObject:
   - component: {fileID: 1770317196}
   - component: {fileID: 1770317195}
   - component: {fileID: 1770317194}
-  - component: {fileID: 1770317198}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1021,19 +989,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1770317198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770317193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64236ab2997f3a24099835817e183e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::canvas
-  cartel: {fileID: 1861926692}
 --- !u!1 &1861926690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1001,7 @@ GameObject:
   - component: {fileID: 1861926693}
   - component: {fileID: 1861926692}
   m_Layer: 5
-  m_Name: cartel
+  m_Name: instrucciones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,8 +1023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 0}
-  m_SizeDelta: {x: 140, y: 450}
+  m_AnchoredPosition: {x: -70, y: 72.539055}
+  m_SizeDelta: {x: 140, y: 304.9219}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1861926692
 MonoBehaviour:
@@ -1091,7 +1046,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'CUIDADO !!!
+
+
+    Un fuerte tornado asusto las vacas y hay que volver
+    a llevarlas al corral antes que se haga de noche.-
+
+
+
+    Debes espantar las
+    vacas para que se asusten y corran hasta entrar al corral
+
+
+
+    Press ENTER
+    to start'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1100,7 +1069,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294770432
   m_fontColor: {r: 0, g: 1, b: 0.99010324, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1125,7 +1094,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1156,7 +1125,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.0712737, y: 0, z: -1.130127, w: 0.129076}
+  m_margin: {x: 1.0712737, y: 0, z: -1.130127, w: -2.0362778}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1298,8 +1267,8 @@ GameObject:
   - component: {fileID: 4320728419977977573}
   - component: {fileID: 7527818681607621387}
   - component: {fileID: 4876552442321045392}
-  - component: {fileID: 7268494568809032546}
   - component: {fileID: 5017564335040237539}
+  - component: {fileID: 7527818681607621388}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1401,20 +1370,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7268494568809032546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940851272594958392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc177935f5cc1fa45bc9b033148d5b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::palyer
-  speed: 0
-  animator: {fileID: 4320728419977977573}
 --- !u!61 &7527818681607621387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1461,6 +1416,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4375, y: 0.6875}
   m_EdgeRadius: 0
+--- !u!114 &7527818681607621388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940851272594958392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc2f5579f0ac1844afd7f6b95baf408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::tapa1
+  animator: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1472,5 +1440,4 @@ SceneRoots:
   - {fileID: 586582146}
   - {fileID: 1770317197}
   - {fileID: 494529780}
-  - {fileID: 1457692874}
   - {fileID: 882268187}
